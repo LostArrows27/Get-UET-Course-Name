@@ -11,10 +11,7 @@ if (UETNavigation) {
         var findClass = currentCourseName.title.split('(');
         currentCourseName.innerText = findClass[0] + "\n"
         if (currentCourseId && currentCourseClass) {
-            if (currentCourseClass.length > 3) {
-                currentCourseClass = currentCourseClass.slice(0, 2);
-            }
-            currentCourseName.innerText += `(${currentCourseId} ` + currentCourseClass.slice(0,2).trim() + ")";
+            currentCourseName.innerText += `(${currentCourseId} ` + currentCourseClass.slice(0,4).trim() + ")";
             console.log(currentCourseName.innerText);
         }
 
