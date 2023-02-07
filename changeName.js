@@ -9,10 +9,10 @@ if (UETNavigation) {
         var currentCourseClass = currentCourseInfo.split('_')[2];
         var currentCourseName = courseIdList[i].querySelector('a');
         var findClass = currentCourseName.title.split('(');
-        currentCourseName.innerText = findClass[0] + "\n"
+        currentCourseName.innerText = findClass[0] + "\n";
+        console.log(findClass[0]);
         if (currentCourseId && currentCourseClass) {
-            currentCourseName.innerText += `(${currentCourseId} ` + currentCourseClass.slice(0,4).trim() + ")";
-            console.log(currentCourseName.innerText);
+            currentCourseName.innerText += `   (${currentCourseId} ` + currentCourseClass.slice(0, 2).trim() + ")";
         }
 
     }
