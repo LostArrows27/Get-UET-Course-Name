@@ -10,10 +10,14 @@ if (UETNavigation) {
         var currentCourseName = courseIdList[i].querySelector('a');
         var findClass = currentCourseName.title.split('(');
         currentCourseName.innerText = findClass[0] + "\n";
-        console.log(findClass[0]);
         if (currentCourseId && currentCourseClass) {
             currentCourseName.innerText += `   (${currentCourseId} ` + currentCourseClass.slice(0, 2).trim() + ")";
         }
 
     }
 }
+
+var activeName = document.querySelector('.tree_item.branch.active_tree_node.canexpand > a');
+var activeCourseWrapper = document.querySelector('.type_course.depth_3.contains_branch.current_branch');
+activeName.style = "color: rgb(125, 199, 255);"
+activeCourseWrapper.style = "    background-color: #333;"
